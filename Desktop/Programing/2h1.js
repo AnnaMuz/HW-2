@@ -1,6 +1,9 @@
 
 
 
+
+
+
 function DrowTriangle1 (row){
 var i=1;
 var j=0;
@@ -78,6 +81,7 @@ var c=0;
 
 var res="";
 var tab = ' ';
+var tab1 = ' ';
 var bar="#";
 
 	for (i =1; i <=row; i++){
@@ -87,15 +91,69 @@ var bar="#";
 			res = res + bar;
 		}
 		res = res +'\n' + tab;
-		tab= tab + tab;
+		tab= tab + tab1;
 	}
 	alert(res);
 }
 
-DrowTriangle1(7);
-DrowTriangle2(7);
-DrowTriangle3(4);
-DrowChess(4,7);
+
+
+
+function DrowTriangle4 (row){
+var i=1;
+var j=0;
+var k=1;
+var c=0;
+
+var res="";
+var tab = ' ';
+var bar="#";
+var bar1="#"
+
+	for (i =1; i <=row; i++){
+		c = row - k;
+		k++;
+		for (j = 1;j<=c; j++) {
+			res = res + tab;
+		}
+		res = res + bar +'\n';
+		bar = bar + bar1;
+	}
+	alert(res);
+}
+
+
+
+function DrowTriangle5 (row){
+var i=1;
+var j=0;
+var k=0;
+var c=0;
+
+var res="";
+var tab = ' ';
+var tab1 = ' ';
+var bar="#";
+
+	for (i =1; i <=row; i++){
+		c = row - k;
+		k++;
+		for (j = 1;j<=c; j++) {
+			res = res + bar;
+		}
+		res = res +'\n'+ tab;
+		tab = tab + tab1;
+	}
+	alert(res);
+}
+
+
+DrowTriangle1(8);
+DrowChess(4,3);
+DrowTriangle2(8);
+DrowTriangle3(8);
+DrowTriangle4(8);
+DrowTriangle5(8);
 
 
 
